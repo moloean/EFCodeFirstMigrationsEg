@@ -1,12 +1,19 @@
 ﻿using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using Migration.Migrations;
 using Persistence;
 
 namespace Migration
 {
     public class MigrationContext : BaseContext<MigrationContext>
     {
+        public MigrationContext()
+            : base(new MigrateDatabaseToLatestVersion<MigrationContext, Configuration>())
+        {
+            
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Make alle Datetime to be datetime2

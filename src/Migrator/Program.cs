@@ -28,13 +28,13 @@ namespace Migrator
 
         private static void MigrateToTarget(string targetMigration)
         {
-            //var configuration = new Migration.Migrations.Configuration();
-            //var migrator = new DbMigrator(configuration);
+            var configuration = new Migration.Migrations.Configuration();
+            var migrator = new DbMigrator(configuration);
 
-            //if (targetMigration != null)
-            //    targetMigration = targetMigration.Trim();
+            if (targetMigration != null)
+                targetMigration = targetMigration.Trim();
 
-            //migrator.Update(targetMigration);
+            migrator.Update(targetMigration);
         }
 
         private static void ParseArgs(IEnumerable<string> args)
