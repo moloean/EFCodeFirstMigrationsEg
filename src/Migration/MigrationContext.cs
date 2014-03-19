@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using Migration.Mappings;
 using Migration.Migrations;
 using Persistence;
 
@@ -16,6 +17,8 @@ namespace Migration
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new PersonMappings());
+
             // Make alle Datetime to be datetime2
             modelBuilder.Conventions.Add(new DateTime2Convention());
             
