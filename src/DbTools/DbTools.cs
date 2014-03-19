@@ -18,13 +18,14 @@ namespace DbTools
         {
             // this is using conection string from config
             Program.Main(new string[0]);
+            
         }
 
 
         [Test, Explicit]
         public void MigrateToTargetOnSelectedDatabaset()
         {
-            Program.Main(new[] { "-t=V14" });
+            Program.Main(new[] { "-t=v1" });
         }
     }
 }

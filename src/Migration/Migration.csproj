@@ -47,8 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration.cs" />
-    <Compile Include="Mappings\PersonMappings.cs" />
     <Compile Include="MigrationContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -57,10 +55,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{E63CEAFE-94CD-497E-9802-796B8ECEAA9D}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Persistence\Persistence.csproj">
       <Project>{7B654B97-DFE4-4786-AEC9-A707A71E717D}</Project>
       <Name>Persistence</Name>

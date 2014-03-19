@@ -9,6 +9,12 @@ namespace Migrator
     {
         public static void Main(string[] args)
         {
+            if (args == null || args.Length == 0)
+            {
+                MigrateToTarget(string.Empty);
+                return;
+            }
+
             ParseArgs(args);
         }
 
@@ -22,13 +28,13 @@ namespace Migrator
 
         private static void MigrateToTarget(string targetMigration)
         {
-            var configuration = new Configuration();
-            var migrator = new DbMigrator(configuration);
+            //var configuration = new Migration.Migrations.Configuration();
+            //var migrator = new DbMigrator(configuration);
 
-            if (targetMigration != null)
-                targetMigration = targetMigration.Trim();
+            //if (targetMigration != null)
+            //    targetMigration = targetMigration.Trim();
 
-            migrator.Update(targetMigration);
+            //migrator.Update(targetMigration);
         }
 
         private static void ParseArgs(IEnumerable<string> args)
@@ -36,7 +42,7 @@ namespace Migrator
             new OptionSet
             {
                 {"d|dropdb", v => DropDb(v != null)},
-                {"t|target", MigrateToTarget}
+                {"t|target=", MigrateToTarget}
             }.Parse(args);
             
         }

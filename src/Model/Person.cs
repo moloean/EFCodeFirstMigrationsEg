@@ -1,9 +1,9 @@
-﻿namespace model
+﻿namespace Model
 {
-    public interface IPerson
+    public class Person
     {
-        string IdentityNumber { get; set; }
-        string FirstName { get; set; }
-        string LastName { get; set; }
+        public string IdentityNumber { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }
