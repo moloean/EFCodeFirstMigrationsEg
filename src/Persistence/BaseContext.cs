@@ -10,7 +10,7 @@ namespace Persistence
 
 
         protected BaseContext(IDatabaseInitializer<TContext> databaseInitializer)
-            : base("cmfdb")
+            : base("cfmdb")
         {
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
