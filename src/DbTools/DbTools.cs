@@ -1,4 +1,4 @@
-﻿using Migrator;
+﻿using Migration;
 using NUnit.Framework;
 
 namespace DbTools

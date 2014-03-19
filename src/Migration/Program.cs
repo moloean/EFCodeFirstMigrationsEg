@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity.Migrations;
-using Migration;
 using NDesk.Options;
 
-namespace Migrator
+
+namespace Migration
 {
     public static class Program
     {
@@ -28,7 +28,7 @@ namespace Migrator
 
         private static void MigrateToTarget(string targetMigration)
         {
-            var configuration = new Migration.Migrations.Configuration();
+            var configuration = new Migrations.Configuration();
             var migrator = new DbMigrator(configuration);
 
             if (targetMigration != null)
