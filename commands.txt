@@ -1,0 +1,3 @@
+Open Package manage console
+rune Enable-Migrations 
+rune Add-Migration
